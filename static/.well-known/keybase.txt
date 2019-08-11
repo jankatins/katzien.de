@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/jankatins
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.katzien.de
+  * I am jankatins (https://keybase.io/jankatins) on keybase.
+  * I have a public key ASAocgZjsmfd988MWIoU3mQysw0mcof-eHXG_KTC3d1lPAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012028720663b267ddf7cf0c588a14de6432b30d267287fe7875c6fca4c2dddd653c0a",
+      "host": "keybase.io",
+      "kid": "012028720663b267ddf7cf0c588a14de6432b30d267287fe7875c6fca4c2dddd653c0a",
+      "uid": "ad1861d82357fd7c533c0d057b50f819",
+      "username": "jankatins"
+    },
+    "merkle_root": {
+      "ctime": 1517244793,
+      "hash": "66419c1d4775985d1b46a12f38c078216c397ddcdf2840a1198bc53cd1bcdc05d077dc8cb26f283afeef3d2f5a229dd548d434b348440aa5cb2c1ef79da16d51",
+      "hash_meta": "775478a6a56629fca7c8ef071cd477d8396d30ecc0628c9b6d89df8f480d1edd",
+      "seqno": 2000276
+    },
+    "service": {
+      "hostname": "www.katzien.de",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.40"
+  },
+  "ctime": 1517244819,
+  "expire_in": 504576000,
+  "prev": "9c22fba493530c9c99eb6381b43eb20dc6a8f507c3e79377cd4548535b0c78ca",
+  "seqno": 11,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgKHIGY7Jn3ffPDFiKFN5kMrMNJnKH/nh1xvykwt3dZTwKp3BheWxvYWTFA0d7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMjg3MjA2NjNiMjY3ZGRmN2NmMGM1ODhhMTRkZTY0MzJiMzBkMjY3Mjg3ZmU3ODc1YzZmY2E0YzJkZGRkNjUzYzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMjg3MjA2NjNiMjY3ZGRmN2NmMGM1ODhhMTRkZTY0MzJiMzBkMjY3Mjg3ZmU3ODc1YzZmY2E0YzJkZGRkNjUzYzBhIiwidWlkIjoiYWQxODYxZDgyMzU3ZmQ3YzUzM2MwZDA1N2I1MGY4MTkiLCJ1c2VybmFtZSI6ImphbmthdGlucyJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUxNzI0NDc5MywiaGFzaCI6IjY2NDE5YzFkNDc3NTk4NWQxYjQ2YTEyZjM4YzA3ODIxNmMzOTdkZGNkZjI4NDBhMTE5OGJjNTNjZDFiY2RjMDVkMDc3ZGM4Y2IyNmYyODNhZmVlZjNkMmY1YTIyOWRkNTQ4ZDQzNGIzNDg0NDBhYTVjYjJjMWVmNzlkYTE2ZDUxIiwiaGFzaF9tZXRhIjoiNzc1NDc4YTZhNTY2MjlmY2E3YzhlZjA3MWNkNDc3ZDgzOTZkMzBlY2MwNjI4YzliNmQ4OWRmOGY0ODBkMWVkZCIsInNlcW5vIjoyMDAwMjc2fSwic2VydmljZSI6eyJob3N0bmFtZSI6Ind3dy5rYXR6aWVuLmRlIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC40MCJ9LCJjdGltZSI6MTUxNzI0NDgxOSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiI5YzIyZmJhNDkzNTMwYzljOTllYjYzODFiNDNlYjIwZGM2YThmNTA3YzNlNzkzNzdjZDQ1NDg1MzViMGM3OGNhIiwic2Vxbm8iOjExLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQAPkFocdFa6hqI6YfLBk5vve1I/ggOoI4QgNTYWNlIRfdad7QZl4tyju/PMXnhy4t/7nBp+30ABP1qGvYUIjkwyoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCAF1JJJn0WE9rokyugNDvO3lqwGvfTdSstZ4n1YrSlOVKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jankatins
+
+==================================================================
