@@ -10,7 +10,8 @@ Mühsamstr. 63
 10249 Berlin  
 E-Mail: jan@katzien.de  
 Internet: www.katzien.de  
-Twitter: [@jankatins](https://twitter.com/jankatins)
+Twitter: [@jankatins](https://twitter.com/jankatins)  
+LinkedIn: [profile](https://www.linkedin.com/in/jankatins/)
 
 Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich
 keine Haftung für die Inhalte externer Links. Für den Inhalt der

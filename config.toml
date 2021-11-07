@@ -19,9 +19,9 @@ disqusShortname = "janschulzgithubio"
 
 [params]
     author = "Jan Katins"
-    description = "Data Engineer @ zenjob | Python enthusiast ([knitpy](https://github.com/jankatins/knitpy), pandas, statsmodels, matplotlib, ggplot/plotnine, [pypandoc](https://github.com/bebraw/pypandoc)) | Jupyter R Kernel | Ex PhD student @ TU Freiberg (bibliometrics, academic research productivity, social networks, social capital). Formerly Jan Schulz"
+    description = "Python Developer @ Aiven | Python enthusiast ([knitpy](https://github.com/jankatins/knitpy), pandas, statsmodels, matplotlib, ggplot/plotnine, [pypandoc](https://github.com/bebraw/pypandoc)) | Jupyter R Kernel | Ex PhD student @ TU Freiberg (bibliometrics, academic research productivity, social networks, social capital). Formerly Jan Schulz"
     keywords = "blog,developer,personal,Katzien,Anderer Dienst im Ausland"
-    info = "Data Engineer, Python enthusiast"
+    info = "Python Developer & Data Engineer"
     avatarurl = "/images/jan.jpg"
     footercontent = "This work is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a> or under a <a href='https://opensource.org/licenses/MIT'>MIT License</a> (e.g. any code)"
 
@@ -47,22 +47,22 @@ disqusShortname = "janschulzgithubio"
 
 [[params.social]]
     name = "Github"
-    icon = "fab fa-github"
+    icon = "fa fa-github"
     weight = 1
     url = "https://github.com/jankatins/"
 [[params.social]]
     name = "Twitter"
-    icon = "fab fa-twitter"
+    icon = "fa fa-twitter"
     weight = 3
     url = "https://twitter.com/jankatins/"
 [[params.social]]
     name = "LinkedIn"
-    icon = "fab fa-linkedin"
+    icon = "fa fa-linkedin"
     weight = 4
     url = "https://www.linkedin.com/in/jankatins/"
 [[params.social]]
     name = "Xing"
-    icon = "fab fa-xing"
+    icon = "fa fa-xing"
     weight = 5
     url = "https://www.xing.com/profile/Jan_Katins/cv"
 
@@ -93,8 +93,8 @@ disqusShortname = "janschulzgithubio"
 
         [languages.de.params]
             author = "Jan Katins"
-            info = "Data Engineer @ zenjob"
-            description = "Data Engineer, Anderer Dienst im Ausland, früher mal aus Katzien"
+            info = "Python Engineer @ Aiven"
+            description = "Python Developer, Data Engineer, Anderer Dienst im Ausland, früher mal aus Katzien"
             keywords = "Katzien,ADiA,Anderer Dienst im Ausland"
             footercontent = ""
 

@@ -13,16 +13,14 @@ Katzien](http://de.wikipedia.org/wiki/Katzien).
 
 Katzien hat damit nichts zu tun, was in anderen Fällen "Meerschweinien"
 oder "Hundien" heißen würde (So fing ein Mailkontakt an, der irgendwann
-1999 begann.).
+1999 begann).
 
 Katzien ist in meiner Usenet Zeit etwas berühmter geworden, weil ich
 meine Postings und Mails fast immer mit einem „Wetterbericht“ versehen
 habe. Da es beim Zeitpunkt des Schreibens aber schon meist sehr dunkel
 war, war der Standard-Gruß meist dieser:
 
-```
-Viele Grüße aus dem dunklen und nachtigen Katzien, Jan.
-```
+> Viele Grüße aus dem dunklen und nachtigen Katzien, Jan.
 
 Das daraus nun ein Domain Name geworden ist hatte vor allem einen Grund:
-alle Kombination aus „Jan“ und „Schulz“ waren schon weg.
+alle Kombination aus "Jan" und "Schulz" waren schon weg.
