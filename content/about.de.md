@@ -8,7 +8,7 @@ slug = "about"
 
 Mein Name ist Jan Katins (vormals Jan Schulz), ich bin am 30.08.1980 in
 Uelzen geboren und habe meine Kindheit in
-[Katzien](https://www.katzien.de/katzien/) und Umgebung verbracht. 
+[Katzien](https://www.katzien.de/katzien/) und Umgebung verbracht.
 
 In meiner Jugend war ich Mitglied in der [DLRG
 Rosche](http://www.rosche.dlrg.de/) und bin dort selber geschwommen und

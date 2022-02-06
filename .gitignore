@@ -4,3 +4,4 @@ resources/
 .bundle/
 vendor/bundle/
 .idea/
+.hugo_build.lock
