@@ -8,8 +8,8 @@ build: clean
 watch: clean
 	$(HUGO_BIN) server --log
 
-upate-theme: clean
-	cd themes/hugo-coder && git checkout master && git pull --ff
+update-theme: clean
+	cd themes/hugo-coder && git checkout main && git pull --ff
 	# this might be an alternative...
 	#git submodule update --remote --merge
 

@@ -11,7 +11,7 @@ defaultContentLanguageInSubdir = true
 paginate = 20
 canonifyurls = true
 
-pygmentsstyle = "vs"
+pygmentsstyle = "friendly"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
@@ -19,9 +19,9 @@ disqusShortname = "janschulzgithubio"
 
 [params]
     author = "Jan Katins"
-    description = "Python Developer @ Aiven | Python enthusiast ([knitpy](https://github.com/jankatins/knitpy), pandas, statsmodels, matplotlib, ggplot/plotnine, [pypandoc](https://github.com/bebraw/pypandoc)) | Jupyter R Kernel | Ex PhD student @ TU Freiberg (bibliometrics, academic research productivity, social networks, social capital). Formerly Jan Schulz"
+    description = "Data Engineer @ Kreuzwerker | Python enthusiast ([knitpy](https://github.com/jankatins/knitpy), pandas, statsmodels, matplotlib, ggplot/plotnine, [pypandoc](https://github.com/bebraw/pypandoc)) | Jupyter R Kernel | Ex PhD student @ TU Freiberg (bibliometrics, academic research productivity, social networks, social capital). Formerly Jan Schulz"
     keywords = "blog,developer,personal,Katzien,Anderer Dienst im Ausland"
-    info = "Python Developer & Data Engineer"
+    info = "Data Engineer & Python Developer"
     avatarurl = "/images/jan.jpg"
     footercontent = "This work is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a> or under a <a href='https://opensource.org/licenses/MIT'>MIT License</a> (e.g. any code)"
 
@@ -40,10 +40,10 @@ disqusShortname = "janschulzgithubio"
     inverted = false
 
     # Custom CSS
-    custom_css = ["css/images.css"]
+    customCSS = ["css/images.css"]
 
 [taxonomies]
-  series = "series"
+  tags = "tags"
 
 [[params.social]]
     name = "Github"
