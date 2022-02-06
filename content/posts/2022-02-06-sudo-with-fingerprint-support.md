@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Configure sudo with fingerprints"
+title: "Configure sudo with fingerprint support"
 comments: True
 date: "2022-02-06"
 description: "Run sudo commands by authenticating via a fingerprint reader with working askpass workflows in ansible/pyinfra"
