@@ -15,8 +15,6 @@ pygmentsstyle = "friendly"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-disqusShortname = "janschulzgithubio"
-
 [params]
     author = "Jan Katins"
     description = "Data Engineer @ Kreuzwerker | Python enthusiast ([knitpy](https://github.com/jankatins/knitpy), pandas, statsmodels, matplotlib, ggplot/plotnine, [pypandoc](https://github.com/bebraw/pypandoc)) | Jupyter R Kernel | Ex PhD student @ TU Freiberg (bibliometrics, academic research productivity, social networks, social capital). Formerly Jan Schulz"
@@ -41,6 +39,12 @@ disqusShortname = "janschulzgithubio"
 
     # Custom CSS
     customCSS = ["css/images.css"]
+
+[params.utterances]
+repo = "jankatins/katzien.de" # https://utteranc.es/#heading-repository
+issueTerm = "pathname" # https://utteranc.es/#heading-mapping
+label = "comments" # https://utteranc.es/#heading-issue-label
+theme = "github-light" # https://utteranc.es/#heading-theme
 
 [taxonomies]
   tags = "tags"
