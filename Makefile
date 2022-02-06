@@ -14,7 +14,10 @@ update-theme: clean
 	#git submodule update --remote --merge
 
 upload: build
-	scp -rp ./public/ katzien.de:katzien3/
+	rsync -rvz --partial --times  ./public/ katzien.de:katzien3/
+
+delete-unused: build
+	rsync -rvz --partial --times --delete  --dry-run  ./public/ katzien.de:katzien3/ | grep deleting
 
 clean:
 	rm -rf ./public
