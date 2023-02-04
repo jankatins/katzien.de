@@ -16,10 +16,11 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 [params]
+# If you change something here, also change stuff in de!
 author = "Jan Katins"
 description = "Data Engineer @ Kreuzwerker | Python enthusiast ([knitpy](https://github.com/jankatins/knitpy), pandas, statsmodels, matplotlib, ggplot/plotnine, [pypandoc](https://github.com/bebraw/pypandoc)) | Jupyter R Kernel | Ex PhD student @ TU Freiberg (bibliometrics, academic research productivity, social networks, social capital). Formerly Jan Schulz"
 keywords = "blog,developer,personal,Katzien,Anderer Dienst im Ausland"
-info = "Data Engineer & Python Developer"
+info = "Python Developer & Data Engineer"
 avatarurl = "/images/jan.jpg"
 footercontent = "This work is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a> or under a <a href='https://opensource.org/licenses/MIT'>MIT License</a> (e.g. any code)"
 
@@ -107,7 +108,7 @@ title = "Jan Katins"
 
 [languages.de.params]
 author = "Jan Katins"
-info = "Python Engineer @ Aiven"
+info = "Python Developer & Data Engineer"
 description = "Python Developer, Data Engineer, Anderer Dienst im Ausland, früher mal aus Katzien"
 keywords = "Katzien,ADiA,Anderer Dienst im Ausland"
 footercontent = ""

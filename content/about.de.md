@@ -53,7 +53,7 @@ worden. Seitdem darf ich mich "Diplom-Wirtschaftsingenieur" nennen.
 Im Anschluss habe ich eine zeitlang als Wissenschaftlicher Mitarbeiter
 an der [TU Bergakademie Freiberg](http://www.tu-freiberg.de/) am Lehrstuhl für
 ABWL, insbesondere Unternehmensführung und Personalwesen gearbeitet.
-Seitdem arbeite ich as Data/BI Engineer (genaueres bei
+Seitdem arbeite ich as Data/BI Engineer und Python Developer (genaueres bei
 [LinkedIn](https://www.linkedin.com/in/jankatins/)).
 
 Ich gehe gerne Schwimmen (Früher mal in der [DLRG](http://www.dlrg.de),
