@@ -4,6 +4,7 @@ title: "What's my IP on the cli"
 comments: True
 date: "2023-01-04"
 description: "TIL: How to get your own IP(s) on the cli via dig"
+draft: false
 ---
 
 I've so often googled "whats my ip" and today I was curious how to do the same on the cli. Seems that there are some DNS
