@@ -57,7 +57,7 @@ Seitdem arbeite ich as Data/BI Engineer und Python Developer (genaueres bei
 [LinkedIn](https://www.linkedin.com/in/jankatins/)).
 
 Ich gehe gerne Schwimmen (Früher mal in der [DLRG](http://www.dlrg.de),
-jetzt einfach nur so) und lese ich sehr gerne, vor allem Fantasy
+jetzt einfach nur so) und lese sehr gerne, vor allem Fantasy
 (Terry Pratchett, Brandon Sanderson, Robert Jordan und vieles mehr).
 Mit Computern kenne ich mich auch ganz gut aus
 (Python, SQL (PostgreSQL), Debian/Ubuntu Linux,
