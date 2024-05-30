@@ -41,11 +41,20 @@ inverted = false
 # Custom CSS
 customCSS = ["css/images.css"]
 
-[params.utterances]
-repo = "jankatins/katzien.de" # https://utteranc.es/#heading-repository
-issueTerm = "pathname" # https://utteranc.es/#heading-mapping
-label = "comments" # https://utteranc.es/#heading-issue-label
-theme = "github-light" # https://utteranc.es/#heading-theme
+[params.giscus] # https://giscus.app
+repo = "jankatins/katzien.de"
+repoID = "MDEwOlJlcG9zaXRvcnkyMDE4MjQ3MjQ="
+category = "Announcements"
+categoryID = "DIC_kwDODAeZ1M4CfuNL"
+mapping = "pathname"
+term = ""
+strict = "1"
+reactionsEnabled = "1"
+emitMetadata = "1"
+inputPosition = "top"
+theme = "preferred_color_scheme"
+lang = "en"
+loading = "lazy"
 
 [taxonomies]
 tags = "tags"
