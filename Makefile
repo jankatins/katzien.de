@@ -1,15 +1,18 @@
 HUGO_BIN=hugo
 
-.PHONY: upload build watch upate-theme clean
+.PHONY: upload build watch upate-theme clean serve
 
 build: clean .ensure-theme
 	$(HUGO_BIN)
 
 watch: clean .ensure-theme
-	$(HUGO_BIN) server --log
+	$(HUGO_BIN) serve
+
+serve: watch
 
 update-theme: clean .ensure-theme
-	cd themes/hugo-coder && git checkout main && git pull --ff
+	git submodule update --remote --force
+	@echo "Please commit the new submodule position"
 	# this might be an alternative...
 	#git submodule update --remote --merge
 
