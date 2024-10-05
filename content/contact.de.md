@@ -11,7 +11,7 @@ Hänselstr. 45a
 
 - E-Mail: [jan@katzien.de](mailto:jan@katzien.de)
 - Internet: [www.katzien.de](https://www.katzien.de)
-- Mastodon: [https://fosstodon.org/@jankatins](https://fosstodon.org/@jankatins)
+- Mastodon: [@jankatins@fosstodon.org](https://fosstodon.org/@jankatins)
 - LinkedIn: [profile](https://www.linkedin.com/in/jankatins/)
 
 Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich
