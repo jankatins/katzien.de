@@ -23,7 +23,7 @@ keywords = "blog,developer,personal,Katzien,Anderer Dienst im Ausland"
 info = "Python Developer & Data Engineer"
 avatarurl = "/images/jan.jpg"
 footercontent = "This work is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a> or under a <a href='https://opensource.org/licenses/MIT'>MIT License</a> (e.g. any code)"
-fediverseCreator = "@jankatins@fosstodon.org "
+fediverseCreator = "@jankatins@fosstodon.org"
 #needs to be second januar of 2006!
 dateformat = "2006-01-02"
 since = "2002"
