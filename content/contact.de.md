@@ -5,8 +5,9 @@ slug = "contact"
 
 ### Impressum
 
-Jan Katins (vormals Jan Schulz)
-Hänselstr. 45a
+<!-- two spaces at the end of the line to add a new newline! -->
+Jan Katins (vormals Jan Schulz)  
+Hänselstr. 45a  
 12437 Berlin
 
 - E-Mail: [jan@katzien.de](mailto:jan@katzien.de)
