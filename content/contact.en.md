@@ -5,5 +5,5 @@ slug = "contact"
 
 You can reach me either via
 email [jan@katzien.de](mailto:jan@katzien.de),
-Twitter [@jankatins](https://twitter.com/jankatins), or
+Mastodon [https://fosstodon.org/@jankatins](https://fosstodon.org/@jankatins), or
 [LinkedIn](https://www.linkedin.com/in/jankatins/).

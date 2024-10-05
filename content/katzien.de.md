@@ -22,5 +22,5 @@ war, war der Standard-Gruß meist dieser:
 
 > Viele Grüße aus dem dunklen und nachtigen Katzien, Jan.
 
-Das daraus nun ein Domain Name geworden ist hatte vor allem einen Grund:
+Das daraus nun ein Domainname geworden ist hatte vor allem einen Grund:
 alle Kombination aus "Jan" und "Schulz" waren schon weg.

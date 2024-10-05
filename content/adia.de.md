@@ -5,10 +5,10 @@ aliases = ["/adia"]
 +++
 
 
->  (2016) Da es mittlerweile keinen Pflichtdienst mehr gibt ist der Teil 
->  zum Administrativen auf deutscher Seite mittlerweile überholt. Ich 
->  vermute, dass sich auch auf der Camphill Seite sehr viel geändert hat. 
->  Use with care...
+> (2016) Da es mittlerweile keinen Pflichtdienst mehr gibt, ist der Teil
+> zum Administrativen auf deutscher Seite überholt. Ich
+> vermute, dass sich auch auf der Camphill Seite sehr viel geändert hat.
+> Use with care...
 
 ### Was ist das?
 
