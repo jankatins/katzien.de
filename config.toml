@@ -39,7 +39,7 @@ rtl = false
 inverted = false
 
 # Custom CSS
-customCSS = ["css/images.css"]
+customCSS = ["css/local.css", "css/fixes.css"]
 
 [params.giscus] # https://giscus.app
 repo = "jankatins/katzien.de"
