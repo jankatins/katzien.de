@@ -11,19 +11,19 @@ Uelzen geboren und habe meine Kindheit in
 [Katzien](https://www.katzien.de/katzien/) und Umgebung verbracht.
 
 In meiner Jugend war ich Mitglied in der [DLRG
-Rosche](http://www.rosche.dlrg.de/) und bin dort selber geschwommen und
+Rosche](https://rosche.dlrg.de/) und bin dort selber geschwommen und
 habe eine Schülermannschaft trainiert.
 
 Im Jahr 2000 habe ich mein Abitur am [Lessing Gymnasium
-Uelzen](http://www.leg-uelzen.de) gemacht. Danach war ich für ein Jahr in der [Camphill Community
-Glencraig](http://www.glencraig.org.uk/) in Nord Irland und habe meinen
+Uelzen](https://www.leg-uelzen.de) gemacht. Danach war ich für ein Jahr in der [Camphill Community
+Glencraig](https://www.glencraig.org.uk/) in Nord Irland und habe meinen
 Zivil-Ersatz-Dienst abgeleistet. Einen Erfahrungsbericht ist unter
 [ADiA](https://www.katzien.de/adia/) zu finden. Danach habe ich an
-der [Universität Karlsruhe (jetzt KIT)](http://www.uni-karlsruhe.de)
+der [Universität Karlsruhe (jetzt KIT)](https://www.uni-karlsruhe.de)
 Wirtschaftsingeneurwesen studiert.
 
 Im Frühjahr 2003 bin ich zur [bonding-studenteninitiative
-e.V.](http://www.bonding.de) gekommen und habe dort neben allerlei
+e.V.](https://www.bonding.de) gekommen und habe dort neben allerlei
 Kleinkram die bonding-Firmenkontaktmesse Karlsruhe 2004 und 2005
 geleitet (halbes Jahr Vorlaufzeit, 20 Personen Team, zwei Tage, 130
 Firmen). Seit Ende 2004 bin ich ausgebildeter Trainer und habe seitdem
@@ -51,12 +51,12 @@ Eine empirische Analyse des Prime Standards) ist mit 1,0 bewertet
 worden. Seitdem darf ich mich "Diplom-Wirtschaftsingenieur" nennen.
 
 Im Anschluss habe ich eine zeitlang als Wissenschaftlicher Mitarbeiter
-an der [TU Bergakademie Freiberg](http://www.tu-freiberg.de/) am Lehrstuhl für
+an der [TU Bergakademie Freiberg](https://www.tu-freiberg.de/) am Lehrstuhl für
 ABWL, insbesondere Unternehmensführung und Personalwesen gearbeitet.
 Seitdem arbeite ich as Data/BI Engineer und Python Developer (genaueres bei
 [LinkedIn](https://www.linkedin.com/in/jankatins/)).
 
-Ich gehe gerne Schwimmen (Früher mal in der [DLRG](http://www.dlrg.de),
+Ich gehe gerne Schwimmen (Früher mal in der [DLRG](https://www.dlrg.de),
 jetzt einfach nur so) und lese sehr gerne, vor allem Fantasy
 (Terry Pratchett, Brandon Sanderson, Robert Jordan und vieles mehr).
 Mit Computern kenne ich mich auch ganz gut aus
