@@ -5,3 +5,4 @@ resources/
 vendor/bundle/
 .idea/
 .hugo_build.lock
+logs
