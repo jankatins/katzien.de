@@ -4,6 +4,7 @@ HUGO_BIN=hugo
 
 build: clean themes/hugo-coder/Makefile
 	$(HUGO_BIN)
+	cp public/en/404.html public/404.html
 
 watch: clean themes/hugo-coder/Makefile
 	$(HUGO_BIN) serve
