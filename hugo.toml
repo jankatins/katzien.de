@@ -8,17 +8,19 @@ defaultcontentlanguage = "en"
 # to get the redirects form the old structure
 defaultContentLanguageInSubdir = true
 
-paginate = 20
 canonifyurls = true
 
 pygmentsstyle = "friendly"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
+[pagination]
+pagerSize = 20
+
 [params]
 # If you change something here, also change stuff in de!
 author = "Jan Katins"
-description = "Python Software Enginnee / Data Engineer | Python enthusiast ([knitpy](https://github.com/jankatins/knitpy), pandas, statsmodels, matplotlib, ggplot/plotnine, [pypandoc](https://github.com/bebraw/pypandoc)) | Jupyter R Kernel | Ex PhD student @ TU Freiberg (bibliometrics, academic research productivity, social networks, social capital). Formerly Jan Schulz"
+description = "Python Software Engineer / Data Engineer | Python enthusiast ([knitpy](https://github.com/jankatins/knitpy), pandas, statsmodels, matplotlib, ggplot/plotnine, [pypandoc](https://github.com/bebraw/pypandoc)) | Jupyter R Kernel | Ex PhD student @ TU Freiberg (bibliometrics, academic research productivity, social networks, social capital). Formerly Jan Schulz"
 keywords = "blog,developer,personal,Katzien,Anderer Dienst im Ausland"
 info = "Python Developer & Data Engineer"
 avatarurl = "/images/jan.jpg"
@@ -73,7 +75,7 @@ url = "https://twitter.com/jankatins/"
 rel = "me"
 [[params.social]]
 name = "Mastodon"
-icon = "fa fa-mastodon"
+icon = "fa-brands fa-mastodon"
 weight = 3
 url = "https://fosstodon.org/@jankatins"
 rel = "me"
