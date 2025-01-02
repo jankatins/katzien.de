@@ -1,0 +1,20 @@
+# The 404 file which should be served, if a webfinger account is not found: in my case the one in the root directory
+ErrorDocument 404 /404.html
+
+# Prevent directory listings and helpful typo corrections -> these would show all webfinger enabled accounts :-(
+Options -Indexes
+Options -MultiViews
+CheckSpelling off
+
+# Use mod_rewrite for fetching the right webfinger content
+RewriteEngine On
+RewriteBase /.well-known/
+
+# /.well-known/webfinger?resource=acct%3Ajan%40ekatzien.de
+# /.well-known/webfinger?resource=acct:jan@katzien.de
+RewriteCond %{QUERY_STRING}  ^resource=acct(:|%3A)([A-Za-z0-9\.\-\+]+)(@|%40)([A-Za-z0-9\.\-]+)$ [NC]
+RewriteRule webfinger webfinger.%2__%4 [NE,E=is_webfinger:true,L]
+Header set Content-Type application/jrd+json env=is_webfinger
+
+# Make sure everything else on /.well-known/webfinger returns a 404
+RewriteRule webfinger - [R=404,L]
