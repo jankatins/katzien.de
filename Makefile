@@ -11,11 +11,10 @@ watch: clean themes/hugo-coder/Makefile
 
 serve: watch
 
+# from https://www.cyberdemon.org/2024/03/20/submodules.html
 update-theme: clean themes/hugo-coder/Makefile
-	git submodule update --remote --force
-	# this might be an alternative...
-	#git submodule update --remote --merge
-	@printf "\n!!! Please commit the new submodule position !!!\n"
+	cd themes/hugo-coder && git pull origin main
+	@printf "\n!!! Please commit the new submodule position if it changed !!!\n"
 
 upload: build
 	rsync -rvz --partial --times  ./public/ katzien.de:katzien3/
@@ -26,6 +25,7 @@ delete-unused: build
 clean:
 	rm -rf ./public
 
+# from https://www.cyberdemon.org/2024/03/20/submodules.html
 themes/hugo-coder/Makefile:
 	git submodule update --init --recursive
 
