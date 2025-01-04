@@ -2,6 +2,7 @@
 title = "Mein Anderer Dienst im Ausland (ADiA)"
 slug = "adia"
 aliases = ["/adia"]
+date = "2020-01-01"
 +++
 
 

@@ -2,6 +2,7 @@
 title = "Katzien: ein kleines Dorf in der Lüneburger Heide"
 slug = "katzien"
 aliases = ["/katzien"]
+date = "2020-01-01"
 +++
 
 Katzien ist ein kleines Dorf, mit rund 45 Einwohnern (mehr oder weniger, 

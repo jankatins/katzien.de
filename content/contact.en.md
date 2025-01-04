@@ -1,6 +1,7 @@
 +++
 title = "Contact"
 slug = "contact"
+date = "2020-01-01"
 +++
 
 You can reach me either via

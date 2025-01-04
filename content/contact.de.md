@@ -1,6 +1,7 @@
 +++
 title = "Kontakt"
 slug = "contact"
+date = "2024-01-01"
 +++
 
 ### Impressum

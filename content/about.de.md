@@ -1,6 +1,7 @@
 +++
 title = "Über mich..."
 slug = "about"
+date = "2020-01-01"
 +++
 
 
