@@ -1,3 +1,15 @@
-ErrorDocument 404 /404.html
 RewriteEngine On
+
+# Upgrade to https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# redirect plain katzien.de to www.katzien.de
+RewriteCond %{HTTP_HOST} ^katzien.de$ [NC]
+RewriteRule (.*) https://www.katzien.de/$1 [R=301,L]
+
+# declare a error document
+ErrorDocument 404 /404.html
+
+# use /en/ as default
 RewriteRule ^$ /en/ [R=302,L]
