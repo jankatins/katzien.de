@@ -19,8 +19,8 @@ These are the steps to get it running under fedora 40-42. USE AT YOUR OWN RISK!
 - If you vpn policy sets a DNS server: in `var/lib/polkit-1/localauthority/50-local.d/10-microsoft-azurevpnclient.pkla`
   change the `Identity=unix-group:sudo` to `Identity=unix-group:wheel`
 - Create a resulting rpm with
-  `sudo rpmbuild --target x86_64 --buildroot $(pwd)/microsoft-azurevpnclient-3.0.0 -bb $(pwd)
-  /microsoft-azurevpnclient-3.0.0/microsoft-azurevpnclient-3.0.0-2.spec`
+  `sudo rpmbuild --target x86_64 --buildroot $(pwd)/microsoft-azurevpnclient-3.0.0 -bb
+  $(pwd)/microsoft-azurevpnclient-3.0.0/microsoft-azurevpnclient-3.0.0-2.spec`
   (Note: the rpm will be build in `..`, so make sure that it's fine to have it there)
 - Install the resulting rpm, overwriting the libcurl mismatch:
   `sudo rpm -Uhv --nodeps ../microsoft-azurevpnclient-3.0.0-2.x86_64.rpm`
