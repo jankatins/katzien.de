@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Using azure VPN under fedora 40-42"
+title: "Using azure VPN under fedora 40-43"
 comments: True
 date: "2024-10-03"
-description: "Converting the microsoft azure vpn ubuntu deb package to run under fedora 40-42"
+description: "Converting the microsoft azure vpn ubuntu deb package to run under fedora 40-43"
 ---
 
 [Microsoft recently released a linux client to access the VPN](https://learn.microsoft.com/en-us/azure/vpn-gateway/point-to-site-entra-vpn-client-linux),
@@ -59,3 +59,5 @@ This lets the cert show up (might need a new import) and connecting works again.
 conflict with a second directory anymore, but now needs to be called from outside by `rpmbuild`.
 Which means the resulting rpm is in a different place.
 Also added a fix for not being able to set the DNS server by changing the unix group in the for the `.pkla` file.
+
+**UPDATE, 2025-11-11**: verified that the above still work with Fedora 43.
