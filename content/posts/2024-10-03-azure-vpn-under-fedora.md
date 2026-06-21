@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "Using azure VPN under fedora 40-43"
+title: "Using azure VPN under fedora 40-44"
 comments: True
 date: "2024-10-03"
-description: "Converting the microsoft azure vpn ubuntu deb package to run under fedora 40-43"
+description: "Converting the microsoft azure vpn ubuntu deb package to run under fedora 40-44"
 ---
 
-> NOTE: Microsoft recently announced that they will
+> NOTE: Microsoft recently (June 2026) announced that they will
 > [retire "Azure VPN Client for Linux"](https://learn.microsoft.com/en-us/azure/vpn-gateway/azure-vpn-client-linux-retirement)
 > on August 31, 2026.
-> There are possible migration path, but if you rely on `Microsoft Entra ID (AAD) authentication`, [you are screwed]
-> (https://learn.microsoft.com/en-us/azure/vpn-gateway/azure-vpn-client-linux-retirement#does-microsoft-entra-id-aad-authentication-work-with-the-alternative-linux-clients)
+> There are possible migration path, but if you rely on `Microsoft Entra ID (AAD) authentication`,
+> [you are screwed](https://learn.microsoft.com/en-us/azure/vpn-gateway/azure-vpn-client-linux-retirement#does-microsoft-entra-id-aad-authentication-work-with-the-alternative-linux-clients)
 > and probably need to ask your sysadmin to switch to a different authentication method.
 
-[Microsoft (a few years back) released a linux client to access the VPN](https://learn.microsoft.com/en-us/azure/vpn-gateway/point-to-site-entra-vpn-client-linux),
+[Microsoft (in 2024) released a linux client to access the VPN](https://learn.microsoft.com/en-us/azure/vpn-gateway/point-to-site-entra-vpn-client-linux),
 but for now, there is only an ubuntu 22.04 package.
 
 These are the steps to get it running under fedora 40-44. USE AT YOUR OWN RISK!
@@ -56,9 +56,10 @@ AzureVPNClient[1035536]: TId:[1039625] [Primary] OPENVPNFRAMING: OpenVpnFraming 
 A colleague at work found the culprit via some strace magic: Azure VPN for Linux does not follow the symlinks in
 `/etc/pki/tls/certs` from some hash(?) to the actual `*.pem` file.
 
-- On Fedora 42, I had to copy the actual `*.pem` file into `/etc/pki/tls/certs`:
+- On **Fedora 42**, I had to copy the actual `*.pem` file into `/etc/pki/tls/certs`:
   `sudo cp /etc/pki/ca-trust/extracted/pem/directory-hash/<the cert your need>.pem /etc/pki/tls/certs/`.
-- On Debian it needs to be copied into `/etc/ssl/certs` (on Fedora that is a symlink to `/etc/pki/tls/certs`).
+- On **Fedora 44** and on **Debian**, it needs to be copied into `/etc/ssl/certs` (on Fedora 42, that was a symlink to
+  `/etc/pki/tls/certs` but now is a separate directory).
 
 This lets the cert show up (might need a new import) and connecting works again.
 
@@ -69,5 +70,5 @@ Also added a fix for not being able to set the DNS server by changing the unix g
 
 **UPDATE, 2025-11-11**: verified that the above still work with Fedora 43.
 
-**UPDATE, Fedora 44**: After upgrading to Fedora 44, the "Certificate Information" was again greyed out,
-and you **again** have to copy the right `*.pem` file into `/etc/pki/tls/certs`.
+**UPDATE, Fedora 44**: After upgrading to Fedora 44, the "Certificate Information" was **again** greyed out,
+and you now have to copy the right `*.pem` file into `/etc/ssl/certs` directory.
