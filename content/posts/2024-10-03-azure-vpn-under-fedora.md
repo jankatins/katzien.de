@@ -6,10 +6,17 @@ date: "2024-10-03"
 description: "Converting the microsoft azure vpn ubuntu deb package to run under fedora 40-43"
 ---
 
-[Microsoft recently released a linux client to access the VPN](https://learn.microsoft.com/en-us/azure/vpn-gateway/point-to-site-entra-vpn-client-linux),
+> NOTE: Microsoft recently announced that they will
+> [retire "Azure VPN Client for Linux"](https://learn.microsoft.com/en-us/azure/vpn-gateway/azure-vpn-client-linux-retirement)
+> on August 31, 2026.
+> There are possible migration path, but if you rely on `Microsoft Entra ID (AAD) authentication`, [you are screwed]
+> (https://learn.microsoft.com/en-us/azure/vpn-gateway/azure-vpn-client-linux-retirement#does-microsoft-entra-id-aad-authentication-work-with-the-alternative-linux-clients)
+> and probably need to ask your sysadmin to switch to a different authentication method.
+
+[Microsoft (a few years back) released a linux client to access the VPN](https://learn.microsoft.com/en-us/azure/vpn-gateway/point-to-site-entra-vpn-client-linux),
 but for now, there is only an ubuntu 22.04 package.
 
-These are the steps to get it running under fedora 40-42. USE AT YOUR OWN RISK!
+These are the steps to get it running under fedora 40-44. USE AT YOUR OWN RISK!
 
 - Download the deb from
   the [MS repository](https://packages.microsoft.com/ubuntu/22.04/prod/pool/main/m/microsoft-azurevpnclient/)
@@ -61,3 +68,6 @@ Which means the resulting rpm is in a different place.
 Also added a fix for not being able to set the DNS server by changing the unix group in the for the `.pkla` file.
 
 **UPDATE, 2025-11-11**: verified that the above still work with Fedora 43.
+
+**UPDATE, Fedora 44**: After upgrading to Fedora 44, the "Certificate Information" was again greyed out,
+and you **again** have to copy the right `*.pem` file into `/etc/pki/tls/certs`.
