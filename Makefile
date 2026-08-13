@@ -77,20 +77,16 @@ analyse-logs: ## Analyse logs
 	cd logs && (zcat access.log.*.gz | goaccess access.log.??.? - -o access.html --log-format='%h %^[%x] "%r" %s %b %v "%R" "%u" "$^" ' --datetime-format='%d/%b/%Y:%H:%M:%S %z')
 	$(OPEN) logs/access.html
 
-MARKDOWN_SOURCE_FILES ?= $(shell git ls-files -- "*.md" ":!:CHANGELOG.md")
-NEW_MARKDOWN_SOURCE_FILES ?= $(shell git ls-files --others --exclude-standard -- "*.md" ":!:CHANGELOG.md")
+MARKDOWN_SOURCE_FILES ?= $(shell git ls-files --others --modified --cached -- "*.md")
+EN_MARKDOWN_SOURCE_FILES ?= $(shell git ls-files --others --modified --cached -- "*.md" ":!:*.de.md")
 
 .PHONY: format-md
 format-md: ## Format all git-known markdown
 	rumdl fmt $(MARKDOWN_SOURCE_FILES)
 
-.PHONY: format-md-new
-format-md-new: ## Format all not yet committed markdown
-	rumdl fmt $(NEW_MARKDOWN_SOURCE_FILES)
-
 .PHONY: fix-typos
-fix-typos: ## Fix spelling errors with typos
-	typos --write-changes
+fix-typos: ## Fix spelling errors with typos (only EN markdown!)
+	typos --write-changes $(EN_MARKDOWN_SOURCE_FILES)
 
 .PHONY: help
 help:     ## Show this help
