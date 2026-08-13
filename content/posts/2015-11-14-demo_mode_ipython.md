@@ -13,7 +13,7 @@ An [PR](https://github.com/ipython-contrib/IPython-extensions/pull/14) in
 
 It will get some demo code (which can be a function in a package or the matplotlib examples on github)
 and lets you execute that code by yourself.
-Specially formatted comments in the function will get turned into formatted text, if the frontend suppports it.
+Specially formatted comments in the function will get turned into formatted text, if the frontend supports it.
 It works in the notebook by adding new cells with the demo content or in the qtconsole/ipython directly by presetting it
 as new input (simple press enter) until the demo is over.
 
@@ -48,7 +48,7 @@ def demo_example():
     print(_sum)
 
 # This lets the `demo(ipyext.demo)` find only the `demo_example`.
-# Only modues with that variable will display an overview of
+# Only modules with that variable will display an overview of
 # the available demos.
 __demos__ = [demo_example]
 ```

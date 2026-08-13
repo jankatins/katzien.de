@@ -79,7 +79,7 @@ def find_in_structure(data, value):
         raise ValueError("Not found in data: %s" % (text,))
 
 def convert_to_dataframe_input(data, converter_dict):
-    """Convert the input data to a form suiteable for pandas.Dataframe
+    """Convert the input data to a form suitable for pandas.Dataframe
 
     Each element in data will be converted to a dict of key: values by using
     the functions in converter_dict. If feed to a pandas.DataFrame, keys

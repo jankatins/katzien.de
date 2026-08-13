@@ -308,7 +308,7 @@ I now have the following in my global `.gitconfig`:
 	# removes output and execution counts form the notebook before committing it
     clean = "jq --indent 1 '(.cells[] | select(has(\"outputs\")) | .outputs) = [] | (.cells[] | select(has(\"execution_count\")) | .execution_count) = null'"
 [diff "ipynb"]
-	# uses a "flattend" representation of the notebook for diffing
+	# uses a "flattened" representation of the notebook for diffing
 	# note the quotes and the escapes for the quotes around the filename and the backslashes...
     textconv = "jq -r -f \"C:\\Users\\jschulz\\Dropbox\\Programme\\cmder\\vendor\\jasc\\nbflatten.jq\" --arg show_output 0"
     cachetextconv = false
@@ -372,7 +372,7 @@ as the way I startup a notebook server does not get the path additions from cmde
   [chromeIPass](https://chrome.google.com/webstore/detail/chromeipass/ompiailgknfdndiefoaoiligalphfdae).
   The keepass file is synced via dropbox to my
   [mobile](https://play.google.com/store/apps/details?id=keepass2android.keepass2android) (+ a keyfile which is manually
-  transfered...).
+  transferred...).
 
 ### final remarks
 

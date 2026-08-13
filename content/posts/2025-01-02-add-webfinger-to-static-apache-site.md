@@ -37,7 +37,7 @@ You need three files:
 
 `.well-known/.htaccess`:
 
-```text .htacces
+```text .htaccess
 # The 404 file which should be served, if a webfinger account is not found: in my case the one in the root directory
 ErrorDocument 404 /404.html
 

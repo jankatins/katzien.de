@@ -102,7 +102,7 @@ class UtilsMixin:
         # So this sorts the thing by the column()._creation_order
         cls.__table__.c._collection.sort(key=lambda k: k[1]._creation_order)
 
-        # Return nothing here as we only mis-used it for our sorting
+        # Return nothing here as we only miss-used it for our sorting
         return {}
 
 

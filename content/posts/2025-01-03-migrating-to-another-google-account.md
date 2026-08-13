@@ -84,7 +84,7 @@ And the new one shared with work and partner and integrated there...
 I ended up adding the new account and then removing the old account at least for a while.
 It took quite a while to re-setup all the backups
 (for android itself, and some apps like WhatsApp and Google Photos)
-and the proper (color/visibility) setup for all the calenders.
+and the proper (color/visibility) setup for all the calendars.
 
 Eventually, I added back the old account, but basically disabled syncing for most of the items in that account.
 
@@ -106,9 +106,9 @@ We use that for our shopping list, so that list had to be shared with the new ac
 I also took this opportunity to clean up the old content I still had there from years ago and moved that elsewhere
 when it was still interesting...
 
-## Google assistent
+## Google assistant
 
-We use google assistent to add items to the shopping list and switch the Christmas decoration on and off.
+We use google assistant to add items to the shopping list and switch the Christmas decoration on and off.
 I basically had to re-setup the whole thing: from training the voice to creating a new "home" and readding all the items
 (plugs, chromecast, google mini).
 
@@ -156,7 +156,7 @@ I guess I will setup a self-hosted solution for that use case.
 This turned out to be shitty: some movies are shared via family sharing (the ones bought ages ago?) and some are not.
 We use google to buy some disney movies for the kids, now that they are not available anymore from netflix and co.
 It seems they will be gone when I remove the old account completely from my phone (again).
-Thankfully it's only a handfull of movies, so I can still live with that,
+Thankfully it's only a handful of movies, so I can still live with that,
 and hopefully the kids will not be interested in them anymore when (or if) they need their own family shared account...
 
 ## Google Photos

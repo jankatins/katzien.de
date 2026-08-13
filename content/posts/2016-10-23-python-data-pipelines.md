@@ -20,8 +20,8 @@ In my opinion the strengths of R's pipeline syntax are:
 - Thanks to **using function** instead of class methods, it's also more easily extendable
   (for a new method on `pandas.DataFrame` you have to add that to the pandas repository or you need to use monkey
   patching).
-  Fortunatelly, both functions and singledispatch are also available in python :-)
-- It **uses normal functions** as pipline parts: `input %>% function()` is equivalent to `function(input)`.
+  Fortunately, both functions and singledispatch are also available in python :-)
+- It **uses normal functions** as pipeline parts: `input %>% function()` is equivalent to `function(input)`.
   Unfortunately, this isn't easily matched in python, as pythons evaluation rules would first evaluate `function()`
   (e.g. call functions without any input).
   So one has to make `function()` return a helper object which can then be used as a pipeline part.
@@ -138,7 +138,7 @@ print(pd.DataFrame({"a" : [1,2,3]}) >> append_col(x=3))
 2  3  3
 ```
 
-The above example implements a pipeline verb for `pandas.DataFrame`, but due to the useage of `singledispatch`,
+The above example implements a pipeline verb for `pandas.DataFrame`, but due to the usage of `singledispatch`,
 this is generic.
 By implementing additional `append_col_<data_source_type>()` functions
 and registering it with the original `append_col` function,
@@ -227,7 +227,7 @@ b
 2  3.5
 ```
 
-### Limitiations
+### Limitations
 
 Compared to R's implementation in the
 [magrittr](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) package, `input >> verb(x)` can't
@@ -286,7 +286,7 @@ my_verb_([9], x=2, y=3)
 
 ### Rules and conventions
 
-To work as a pipline verb, functions **must** follow these rules:
+To work as a pipeline verb, functions **must** follow these rules:
 
 - Pipelines assume that the verbs itself are side-effect free, i.e. they do not change the inputs of the data pipeline.
   This means that actual implementations of a verb for a specific data source must ensure
