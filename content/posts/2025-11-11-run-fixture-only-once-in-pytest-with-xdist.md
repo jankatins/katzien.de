@@ -6,20 +6,20 @@ date: "2025-11-11"
 description: "A python decorator which turns any regular yielding pytest fixture which is executed only once when run via xdist"
 ---
 
-If you run [pytest](https://docs.pytest.org/en/stable/) tests 
-with [pytest-xdist](https://pytest-xdist.readthedocs.io) 
+If you run [pytest](https://docs.pytest.org/en/stable/) tests with [pytest-xdist](https://pytest-xdist.readthedocs.io)
 you might have run into the issue  
 that all needed fixtures are executed on all workers.
-In some cases this breaks your tests because e.g. a 
+In some cases this breaks your tests because e.g. a
 [testcontainers setup](https://github.com/testcontainers/testcontainers-python)
 wants to bind to a specific port.
 
-The [pytest-xdist docs have a recipe to prevent that and run a session fixture only once per overall run](https://pytest-xdist.readthedocs.io/en/stable/how-to.html#making-session-scoped-fixtures-execute-only-once)
+The
+[pytest-xdist docs have a recipe to prevent that and run a session fixture only once per overall run](https://pytest-xdist.readthedocs.io/en/stable/how-to.html#making-session-scoped-fixtures-execute-only-once)
 but this needs to be applied to every such fixture.
 
 This is a decorator which can be applied to any (non-async) yielding fixture which returns a pydantic class
 (pydantic class to have an easy (de-)serialization interface).
-It needed a few tricks (`wrapt` +  a special `adapter`) to get pytest to accept it as a generator fixture.
+It needed a few tricks (`wrapt` + a special `adapter`) to get pytest to accept it as a generator fixture.
 
 The usage is essentially:
 
@@ -31,9 +31,9 @@ class Something(pydantic.BaseModel):
     ...
 
 @pytest.fixture(scope="session", name="something")
-# Needed to make saving the returned value to disk on the first worker 
+# Needed to make saving the returned value to disk on the first worker
 # and reading it in and returning it on other workers possible
-@xdist_run_only_once(return_type=Something) 
+@xdist_run_only_once(return_type=Something)
 def fixture_something() -> Iterator[Something]:
     """Something fixture."""
     # ... setup e.g. a DockerCompose kafka + schema registry setup with fixed ports
@@ -41,10 +41,9 @@ def fixture_something() -> Iterator[Something]:
     # ... cleanup
 ```
 
-And here is the code for the `xdist_run_only_once` decorator. 
+And here is the code for the `xdist_run_only_once` decorator.
 It's lightly tested (as in "it works on my machine for my use case").
 As you can see by the debug code I left in, I found it tricky to debug. :-(
-
 
 ```python
 import contextlib
@@ -261,4 +260,3 @@ def xdist_run_only_once(  # noqa: PLR0915
 
     return adapted
 ```
-

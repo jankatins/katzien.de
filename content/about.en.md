@@ -4,9 +4,6 @@ slug = "about"
 date = "2020-01-01"
 +++
 
-
-
-
 ![Jan Katins](/images/jan.jpg#floatright)
 
 I'm a Senior Software & Data Engineer.

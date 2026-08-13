@@ -16,7 +16,8 @@ description: "Converting the microsoft azure vpn ubuntu deb package to run under
 [Microsoft (in 2024) released a linux client to access the VPN](https://learn.microsoft.com/en-us/azure/vpn-gateway/point-to-site-entra-vpn-client-linux),
 but for now, there is only an ubuntu 22.04 package.
 
-These are the steps to get it running under fedora 40-44. USE AT YOUR OWN RISK!
+These are the steps to get it running under fedora 40-44.
+USE AT YOUR OWN RISK!
 
 - Download the deb from
   the [MS repository](https://packages.microsoft.com/ubuntu/22.04/prod/pool/main/m/microsoft-azurevpnclient/)
@@ -38,7 +39,8 @@ Afterward, you can
 [login as described](https://learn.microsoft.com/en-us/azure/vpn-gateway/point-to-site-entra-vpn-client-linux#download-and-install-the-azure-vpn-client)
 by importing the downloaded connection file.
 
-It works... But obviously, a native Fedora package would be nice.
+It works...
+But obviously, a native Fedora package would be nice.
 
 **UPDATE, Fedora 42**: it broke, the "Certificate Information" was greyed out and connecting errored out.
 
@@ -53,8 +55,8 @@ AzureVPNClient[1035536]: TId:[1039625] Verification result for certificate chain
 AzureVPNClient[1035536]: TId:[1039625] [Primary] OPENVPNFRAMING: OpenVpnFraming hit error processing packet, initiating teardown of tunnel error: 610970100000012 from tls_openssl_common.cpp line 151, facility MobileAccess with detail: Root cert validation failed
 ```
 
-A colleague at work found the culprit via some strace magic: Azure VPN for Linux does not follow the symlinks in
-`/etc/pki/tls/certs` from some hash(?) to the actual `*.pem` file.
+A colleague at work found the culprit via some strace magic:
+Azure VPN for Linux does not follow the symlinks in `/etc/pki/tls/certs` from some hash(?) to the actual `*.pem` file.
 
 - On **Fedora 42**, I had to copy the actual `*.pem` file into `/etc/pki/tls/certs`:
   `sudo cp /etc/pki/ca-trust/extracted/pem/directory-hash/<the cert your need>.pem /etc/pki/tls/certs/`.
@@ -63,8 +65,8 @@ A colleague at work found the culprit via some strace magic: Azure VPN for Linux
 
 This lets the cert show up (might need a new import) and connecting works again.
 
-**UPDATE, 2025-09-26**: A newer `alien` seems to generate some slightly different spec file, which does not
-conflict with a second directory anymore, but now needs to be called from outside by `rpmbuild`.
+**UPDATE, 2025-09-26**: A newer `alien` seems to generate some slightly different spec file,
+which does not conflict with a second directory anymore, but now needs to be called from outside by `rpmbuild`.
 Which means the resulting rpm is in a different place.
 Also added a fix for not being able to set the DNS server by changing the unix group in the for the `.pkla` file.
 

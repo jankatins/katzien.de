@@ -6,9 +6,9 @@ date: "2024-10-03"
 description: "Analysing access logs of an Ionos hosted static site with goaccess"
 ---
 
-My domain [katzien.de](https://www.katzien.de/en/) is hosted by Ionos. They supply access logs in a subfolder of 
-the account. To analyse them with [goacces](https://goaccess.io/), the following log-format and date-time arguments 
-are needed:
+My domain [katzien.de](https://www.katzien.de/en/) is hosted by Ionos.
+They supply access logs in a subfolder of the account.
+To analyse them with [goacces](https://goaccess.io/), the following log-format and date-time arguments are needed:
 
 ```shell
 goaccess access.log.??.? -o access.html --log-format='%h %^[%x] "%r" %s %b %v "%R" "%u" "$^" ' --datetime-format='%d/%b/%Y:%H:%M:%S %z'
@@ -28,4 +28,5 @@ analyse-logs:
 
 (rsync uses a host alias in `~/.ssh/config` with ssh key access...)
 
-Of course, this made me realize that I have more malicious traffic than real read... Oh well...
+Of course, this made me realize that I have more malicious traffic than real read...
+Oh well...

@@ -6,13 +6,15 @@ date: "2022-02-06"
 description: "Run sudo commands by authenticating via a fingerprint reader with working askpass workflows in ansible/pyinfra"
 ---
 
-I want to be able to run sudo commands by authenticating via a fingerprint reader, but only when I run them
-interactively. This shows how to do it without breaking ansible/pyinfra usage of sudo.
+I want to be able to run sudo commands by authenticating via a fingerprint reader,
+but only when I run them interactively.
+This shows how to do it without breaking ansible/pyinfra usage of sudo.
 
-### Enabling sudo fingerprint authentication on debian
+## Enabling sudo fingerprint authentication on debian
 
-I've a debian unstable system and at the time of writing, it didn't configure fingerprint authentication for `sudo`
-out of the box. Adding support for it was two steps:
+I've a debian unstable system and at the time of writing,
+it didn't configure fingerprint authentication for `sudo` out of the box.
+Adding support for it was two steps:
 
 ```bash
 # Installing the required software
@@ -34,16 +36,20 @@ This changed the following in `/etc/pam.d/common-auth`:
 
 ### Working with ansible / pyinfra
 
-The above configures pam to first authenticate against the fingerprint pam module (`pam_fprintd.sp`) and only afterwards
-against the password module (`pam_unix.so`). If you have a script which runs sudo with a password command (e.g.
-ansible/pyinfra, both python apps), this means every sudo call will ask for fingerprint authentication. Which made me
-quite mad when I tried it, and I quickly gave up on this. But since
-[sudo 1.9.9](https://github.com/sudo-project/sudo/commit/48bc498a6fbbe6a98de916a6a3e68f0ee6acfab1), `sudo` now supports
-a different `pam` profile when `sudo --askpass` (or `sudo -A`) is used:
+The above configures pam to first authenticate against the fingerprint pam module (`pam_fprintd.sp`)
+and only afterwards against the password module (`pam_unix.so`).
+If you have a script which runs sudo with a password command
+(e.g. ansible/pyinfra, both python apps), this means every sudo call will ask for fingerprint authentication.
+Which made me quite mad when I tried it, and I quickly gave up on this.
+But since [sudo 1.9.9](https://github.com/sudo-project/sudo/commit/48bc498a6fbbe6a98de916a6a3e68f0ee6acfab1),
+`sudo` now supports a different `pam` profile when `sudo --askpass` (or `sudo -A`) is used:
 
-> **pam_askpass_service**
-> On systems that use PAM for authentication, this is the service name used when the -A option is specified. The default value is either “@pam_service@” or “sudo”, depending on whether or not the -i option is also specified. See the description of pam_service for more information.
-> This setting is only supported by version 1.9.9 or higher. -- [sudoers(5)](https://www.sudo.ws/docs/man/1.9.9/sudoers.man/)
+> **pam_askpass_service** On systems that use PAM for authentication,
+> this is the service name used when the -A option is specified.
+> The default value is either “@pam_service@” or “sudo”, depending on whether or not the -i option is also specified.
+> See the description of pam_service for more information.
+> This setting is only supported by version 1.9.9
+> or higher. -- [sudoers(5)](https://www.sudo.ws/docs/man/1.9.9/sudoers.man/)
 
 So, lets create a `sudo-askpass` `pam` configuration:
 
@@ -53,7 +59,8 @@ So, lets create a `sudo-askpass` `pam` configuration:
 λ  sudo nano /etc/pam.d/sudo-askpass
 ```
 
-This needs now a `pam_unix.so` line before including `common-auth`. Afterwards, in my case, it read:
+This needs now a `pam_unix.so` line before including `common-auth`.
+Afterwards, in my case, it read:
 
 ```text
 #%PAM-1.0
@@ -85,8 +92,8 @@ That file should afterwards contain:
 Defaults pam_askpass_service=sudo-askpass
 ```
 
-And now it should work: `sudo <command>` should still behave as before but when using `sudo -A <command>`, it should not
-ask for fingerprint authentication.
+And now it should work: `sudo <command>` should still behave as before but when using `sudo -A <command>`,
+it should not ask for fingerprint authentication.
 
 Tested be creating a sudo password helper `sudo_pass.sh`:
 
@@ -95,8 +102,8 @@ Tested be creating a sudo password helper `sudo_pass.sh`:
 echo mypassword
 ```
 
-and then calling `sudo -A` with it,
-like [pyinfra does](https://github.com/Fizzadar/pyinfra/blob/2fec4e38f32c6d86331bf7d58457e3b3a64fa69c/pyinfra/api/connectors/util.py#L294)
+and then calling `sudo -A` with it, like
+[pyinfra does](https://github.com/Fizzadar/pyinfra/blob/2fec4e38f32c6d86331bf7d58457e3b3a64fa69c/pyinfra/api/connectors/util.py#L294)
 
 ```bash
 λ  SUDO_ASKPASS=./sudo_pass.sh sudo -H -A -k cat /etc/sudoers
@@ -104,11 +111,13 @@ like [pyinfra does](https://github.com/Fizzadar/pyinfra/blob/2fec4e38f32c6d86331
 
 ### Sidenote
 
-During my experimentation with `sudo` for the above, I noticed an interesting fact: At least my fingerprint reader in my
-Lenovo X1 Carbon (7th Gen) seems to only support a single process asking for a password and any other process then
-errors. This also makes the `pam_fprintd.so` pam module fail directly and pam then runs the password
-module `pam_unix.so` next. Which is exactly what I want. So a workaround seems to be to start a `fprintd-verify` in one
-terminal window and then start the `sudo` using script in another...
+During my experimentation with `sudo` for the above, I noticed an interesting fact:
+At least my fingerprint reader in my Lenovo X1 Carbon
+(7th Gen) seems to only support a single process asking for a password and any other process then errors.
+This also makes the `pam_fprintd.so` pam module fail directly and pam then runs the password module `pam_unix.so` next.
+Which is exactly what I want.
+So a workaround seems to be to start a `fprintd-verify` in one terminal window
+and then start the `sudo` using script in another...
 
 Another sidenote: At least once (`ctrl+c` during `fprintd-verify`?) I got the fingerprint reader in a bad state:
 

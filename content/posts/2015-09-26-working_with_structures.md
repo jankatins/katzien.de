@@ -5,7 +5,8 @@ comments: True
 date: "2015-09-26"
 ---
 
-I updated the functions in my [last blog post]({{< ref "2015-09-18-working_with_dicts" >}}") (rename the functions and added a few corner cases) and added a new `convert_to_dataframe_input` function:
+I updated the functions in my [last blog post]({{< ref "2015-09-18-working_with_dicts" >}}")
+(rename the functions and added a few corner cases) and added a new `convert_to_dataframe_input` function:
 
 ```python
 # can be a dict or a list of structures

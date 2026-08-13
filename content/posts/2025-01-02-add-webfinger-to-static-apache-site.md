@@ -6,21 +6,23 @@ date: "2025-01-02"
 description: "add webfinger to a hugo site hosted on a apache webserver to be findable from mastodon"
 ---
 
-[Webfinger](https://en.wikipedia.org/wiki/WebFinger) is a protocol to get information about a user. It's used for
-[discoverability in mastodon](https://docs.joinmastodon.org/spec/webfinger/): search for an email "jan@katzien.de"
-on your home instance (you must be logged in for this to work!) and mastodon will query
-`/.well-known/webfinger?resource=acct:jan@katzien.de` on `katzien.de` to look up
-information about me and my mastodon profile.
+[Webfinger](https://en.wikipedia.org/wiki/WebFinger) is a protocol to get information about a user.
+It's used for [discoverability in mastodon](https://docs.joinmastodon.org/spec/webfinger/):
+search for an email "<jan@katzien.de>" on your home instance
+(you must be logged in for this to work!)
+and mastodon will query `/.well-known/webfinger?resource=acct:jan@katzien.de` on `katzien.de` to look up information
+about me and my mastodon profile.
 
 There are a [few](https://blog.maartenballiauw.be/post/2022/11/05/mastodon-own-donain-without-hosting-server.html)
-[pages](https://blog.maartenballiauw.be/post/2022/11/05/mastodon-own-donain-without-hosting-server.html) which
-describe how to do it for a static page on your own static website: you dump the content of that URL on your mastodon
-home instance (e.g. in my case
+[pages](https://blog.maartenballiauw.be/post/2022/11/05/mastodon-own-donain-without-hosting-server.html) which describe
+how to do it for a static page on your own static website: you dump the content of that URL on your mastodon home
+instance (e.g. in my case
 [https://fosstodon.org/.well-known/webfinger?resource=acct:jankatins@fosstodon.org](https://fosstodon.org/.well-known/webfinger?resource=acct:jankatins@fosstodon.org))
-into a file `.well-known/webfinger` and your server will serve that. But doing it this way will not take the query
-parameters into account, creating in essence a catch-all address: all emails will map to that one webfinger content.
-I don't want that, but I also don't want to use a php script or something similar to the site to serve different
-content per query parameter.
+into a file `.well-known/webfinger` and your server will serve that.
+But doing it this way will not take the query parameters into account, creating in essence a catch-all address:
+all emails will map to that one webfinger content.
+I don't want that, but I also don't want to use a php script
+or something similar to the site to serve different content per query parameter.
 
 So here is a way to solve it using `mod_rewrite` if you are hosting your domain on an apache server:
 
@@ -35,7 +37,7 @@ You need three files:
 
 `.well-known/.htaccess`:
 
-```.htacces
+```text .htacces
 # The 404 file which should be served, if a webfinger account is not found: in my case the one in the root directory
 ErrorDocument 404 /404.html
 
@@ -59,6 +61,7 @@ RewriteRule webfinger - [R=404,L]
 ```
 
 `.well-known/webfinger.jan__katzien.de`
+
 ```json
 {
   "subject": "acct:jankatins@fosstodon.org",
@@ -123,7 +126,7 @@ Also make sure that all unknown emails return 404:
 ...
 ```
 
-Now you can search for `jan@katzien.de` on a mastodon instance (as long as you are logged in), and you will find my
-mastodon profile:
+Now you can search for `jan@katzien.de` on a mastodon instance
+(as long as you are logged in), and you will find my mastodon profile:
 
 ![Search for my name on my maston instance](/uploads/2025/2025-01-02-add-webfinger-to-static-apache-site-1.png)

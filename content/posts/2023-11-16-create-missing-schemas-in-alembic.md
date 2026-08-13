@@ -6,11 +6,14 @@ date: "2023-11-16"
 description: "Adding migrations for creating (and dropping) postgresql schemas."
 ---
 
-At work, we generate a bunch of files with sqlalchemy classes in them. One of the problems is
-that `alembic revision --autogenerate` does not generate schemas and therefore one needs to manually add schemas
-for them. There are [workarounds](https://stackoverflow.com/a/70571077/1380673), but these always add the DDL to each
-new migration and one either has to clean it up or live with the (unneeded) DDL code. This is a solutions which actually
-looks at the already existing schemas and compares it with the schemas used in create table operations:
+At work, we generate a bunch of files with sqlalchemy classes in them.
+One of the problems is that `alembic revision --autogenerate` does not generate schemas and
+therefore one needs to manually add schemas for them.
+There are [workarounds](https://stackoverflow.com/a/70571077/1380673),
+but these always add the DDL to each new migration and one either has to clean it up
+or live with the (unneeded) DDL code.
+This is a solutions which actually looks at the already existing schemas
+and compares it with the schemas used in create table operations:
 
 ```python
 import logging
@@ -142,4 +145,5 @@ def downgrade() -> None:
     op.execute('DROP SCHEMA whatever')
 ```
 
-Anything to improve here? Leave a comment!
+Anything to improve here?
+Leave a comment!
