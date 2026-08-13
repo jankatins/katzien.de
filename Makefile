@@ -34,8 +34,8 @@ build: clean themes/hugo-coder/Makefile ## Build the website into the ./public f
 
 .PHONY: .open-in-browser
 .open-in-browser:
-	@sleep 2
-	$(OPEN) http://localhost:1313/
+	@sleep 0.1
+	$(OPEN) http://localhost:1313/en/posts/
 
 .PHONY: serve
 serve: ## Serve the website from local
@@ -87,6 +87,10 @@ format-md: ## Format all git-known markdown
 .PHONY: fix-typos
 fix-typos: ## Fix spelling errors with typos (only EN markdown!)
 	typos --write-changes $(EN_MARKDOWN_SOURCE_FILES)
+
+
+.PHONY: pr
+pr: fix-typos format-md ## Do all the stuff which I expect before committing
 
 .PHONY: help
 help:     ## Show this help
