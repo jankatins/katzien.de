@@ -55,6 +55,7 @@ themes/hugo-coder/Makefile:
 .PHONY: upload
 upload: build ## Upload generated files
 	rsync -rvz --partial --times  ./public/ katzien.de:katzien3/
+	$(OPEN) https://www.katzien.de/en/posts/
 
 .PHONY: delete-unused
 delete-unused: build ## Delete unused files in ftp site
